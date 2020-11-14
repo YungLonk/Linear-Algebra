@@ -35,7 +35,7 @@ function isSameSize(A, B) {
     else return false;
 }
 
-function multiply1byNMatricies(row, column) {
+function multiplyRowAndColumn(row, column) {
     if(row.length == column.length) {
         let ans = 0;
         for(let i = 0; i < row.length; i++) {
@@ -43,11 +43,41 @@ function multiply1byNMatricies(row, column) {
         return ans;}
     else return "";}
 
+function parseMatrix(matrix) {
+    const newMatrix;
+    for(const row in matrix.split(", ")) {
+        row.split(" ");
+    }
+}
+
 /* ------------------------------- Mathematical Functions ------------------------------- */
 function addByK(matrix, k) {
-
+    let ans = [];
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[i].length; j++) {
+            ans[i][j] = matrix[i][j] + k;
+        }
+    }
+    return ans
 }
 
 function addByB(A, B) {
+    if(A.length == B.length) {
+        let ans = [];
+        for(let i = 0; i < A.length; i++) {
+            for(let j = 0; j < A[i].length; j++) {
+                ans[i][j] = A[i][j] + B[i][j]}}
+        console.log(ans);
+        return ans;}
+    else return [];}
+
+function subtractByK(matrix, k) {
+    let ans = [];
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[i].length; j++) {
+            ans[i][j] = matrix[i][j] - k;}}
+    return ans;}
+
+function subtractByB(A, B) {
 
 }
