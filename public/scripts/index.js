@@ -44,10 +44,12 @@ function multiplyRowAndColumn(row, column) {
     else return "";}
 
 function parseMatrix(matrix) {
-    const newMatrix;
-    for(const row in matrix.split(", ")) {
-        row.split(" ");
+    let newMatrix;
+    let rows = matrix.split(", ");
+    for(const row = 0; row < rows.length; row++) {
+        newMatrix = row.split(" ");
     }
+    return newMatrix;
 }
 
 /* ------------------------------- Mathematical Functions ------------------------------- */
@@ -78,6 +80,5 @@ function subtractByK(matrix, k) {
             ans[i][j] = matrix[i][j] - k;}}
     return ans;}
 
-function subtractByB(A, B) {
-
-}
+const mat = parseMatrix("1 2 3, 4 5 6, 7 8 9");
+console.log(mat);
