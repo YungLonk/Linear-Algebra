@@ -14,4 +14,8 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.listen(PORT, function() {console.log(`Server listing on port ${PORT}.`)});
