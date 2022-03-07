@@ -44,10 +44,10 @@ function multiplyRowAndColumn(row, column) {
     else return "";}
 
 function parseMatrix(matrix) {
-    let newMatrix;
-    let rows = matrix.split(", ");
+    let newMatrix = [];
+    let rows = matrix.trim().split(", ");
     for(const row = 0; row < rows.length; row++) {
-        newMatrix = row.split(" ");
+        newMatrix[row] = row.split(" ");
     }
     return newMatrix;
 }

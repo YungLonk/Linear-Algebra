@@ -14,9 +14,30 @@
             </ul>
         </div>
         <div id="inputSec">
+            <!-- Upon submiting the matrix, the site will store that information for later and ask the user
+            for either another matrix or a single number -->
             <form id="inputForm">
                 <input type="text" id="userMat" required placeholder="x x x, x x x, ...">
-                <input type="submit" id="submit">
+
+                <input type="radio" name="operation" id="addByK" value="1">
+                <label for="addByK">Add my matrix by a constant</label>
+
+                <input type="radio" name="operation" id="addByB" value="2">
+                <label for="addByB">Add my matrix by another matrix</label>
+
+                <input type="radio" name="operation" id="subtractByK" value="3">
+                <label for="subtractByK">Subtract my matrix by a constant</label>
+
+                <input type="radio" name="operation" id="subtractByB" value="4">
+                <label for="subtractByB">Subtract my matrix by another matrix</label>
+
+                <input type="radio" name="operation" id="multiplyByK" value="5">
+                <label for="multiplyByK">Multiply my matrix by a constant</label>
+
+                <input type="radio" name="operation" id="multiplyByB" value="6">
+                <label for="multiplyByB">Multiply my matrix by another matrix</label>
+
+                <input type="submit" id="submit" name="end">
             </form>
         </div>
         <div id="answerSec">
